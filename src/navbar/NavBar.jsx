@@ -20,8 +20,8 @@ export default function NavBar() {
                 </ul>
             </div>
             <div className="navRight">
-                <img className="navImage" src="xd.jpg" alt=""></img>
                 <i className="navSearchIcon fas fa-search"></i>
+                <img className="navImage" src="xd.jpg" alt=""></img>
             </div>
         </div>
     )
