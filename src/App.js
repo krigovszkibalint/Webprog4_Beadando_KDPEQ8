@@ -1,8 +1,10 @@
+import NavBar from "./navbar/NavBar";
+
 function App() {
   return (
-    <div className="App">
-      web4 beadandó
-    </div>
+    <>
+    <NavBar />
+    </>
   );
 }
 
