@@ -1,4 +1,4 @@
-import Image from "../assets/img/postimg.jpg"
+import Image from "../../assets/img/postimg.jpg"
 import './post.css'
 
 export default function Post() {

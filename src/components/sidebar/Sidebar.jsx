@@ -1,4 +1,4 @@
-import Image from "../assets/img/sidebar.jpg"
+import Image from "../../assets/img/sidebar.jpg"
 import "./sidebar.css"
 
 export default function Sidebar() {

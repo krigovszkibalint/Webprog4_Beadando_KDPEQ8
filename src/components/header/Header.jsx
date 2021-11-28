@@ -1,4 +1,4 @@
-import Image from "../assets/img/background.jpg"
+import Image from "../../assets/img/background.jpg"
 import "./header.css"
 
 function Header() {
