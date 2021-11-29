@@ -1,3 +1,4 @@
+import Image from "../../assets/img/xd.JPG"
 import "./navbar.css"
 
 export default function NavBar() {
@@ -21,7 +22,7 @@ export default function NavBar() {
             </div>
             <div className="navRight">
                 <i className="navSearchIcon fas fa-search"></i>
-                <img className="navImage" src="xd.jpg" alt=""></img>
+                <img className="navImage" src={Image} alt=""></img>
             </div>
         </div>
     )
