@@ -1,6 +1,6 @@
 import Image from "../../assets/img/singlepostimg.jpg"
-import Sidebar from '../sidebar/Sidebar'
-import './singlepost.css'
+import Sidebar from "../sidebar/Sidebar"
+import "./singlepost.css"
 
 export default function SinglePost() {
     return (

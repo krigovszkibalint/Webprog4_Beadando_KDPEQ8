@@ -1,0 +1,82 @@
+.settings {
+    display: flex;
+}
+.settingsWrapper {
+    flex: 9;
+    padding: 30px;
+}
+.settingsTitle {
+    font-family: 'Varela Round', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.settingsUpdateTitle {
+    font-size: 30px;
+    margin-bottom: 20px;
+    color: rgb(27, 28, 31);
+}
+.settingsDeleteTitle {
+    font-size: 16px;
+    color: red;
+    cursor: pointer;
+}
+.settingsForm {
+    display: flex;
+    flex-direction: column;
+}
+.settingsProfilePicture {
+    display: flex;
+    align-items: center;
+    margin-top: 10px 0;
+}
+.settingsProfilePicture > img {
+    width: 70px;
+    height: 70px;
+    border-radius: 20px;
+    object-fit: cover;
+}
+.settingsProfilePictureIcon {
+    width: 25px;
+    height: 25px;
+    border-radius: 50px;
+    color: #a1a1a1;
+    display: inline-flex;
+    vertical-align: middle;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 18px;
+}
+.settingsProfilePictureIcon:last-child {
+    font-size: 26px;
+}
+.settingsForm > label {
+    font-family: 'Varela Round', sans-serif;
+    font-size: 22px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+.settingsForm > input {
+    color: gray;
+    margin: 10px 0;
+    height: 30px;
+    border: none;
+    border-bottom: 1px solid rgb(29, 29, 32);
+    font-size: 16px;
+}
+.settingsForm > input:focus {
+    outline: none;
+}
+.settingsSubmit {
+    width: 150px;
+    align-self: center;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    background-color: #2e303a;
+    padding: 10px;
+    margin-top: 20px;
+    cursor: pointer;
+    font-size: 16px;
+}
