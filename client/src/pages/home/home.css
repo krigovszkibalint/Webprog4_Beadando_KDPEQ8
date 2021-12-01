@@ -1,0 +1,17 @@
+.home {
+    display: flex;
+}
+::-webkit-scrollbar {
+    width: 12px;
+}
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 10px;
+}
+  ::-webkit-scrollbar-thumb {
+    background: rgb(194, 194, 194);
+    border-radius: 10px;
+}
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgb(145, 145, 145);
+}
