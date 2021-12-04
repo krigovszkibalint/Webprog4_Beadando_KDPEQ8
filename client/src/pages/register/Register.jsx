@@ -14,7 +14,6 @@ export default function Login() {
                 <input className="registerInput" type="password" placeholder="Password" />
                 <button className="registerButton">Register</button>
             </form>
-            <hr />
             <button className="registerLoginButton">
                 <Link className="link" to="/login">Login</Link>
             </button>

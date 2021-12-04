@@ -1,14 +1,32 @@
+import axios from "axios";
+import { useEffect, useState } from "react";
+import { useLocation } from "react-router"
 import Image from "../../assets/img/singlepostimg.jpg"
 import Sidebar from "../sidebar/Sidebar"
 import "./singlepost.css"
 
 export default function SinglePost() {
+    const location = useLocation();
+    const path = location.pathname.split("/")[2];
+    const [post, setPost] = useState({});
+
+    useEffect(()=>{
+        const getPost = async ()=>{
+            const res = await axios.get("/posts/"+path);
+            setPost(res.data);
+        };
+        getPost();
+    },[path])
     return (
         <div className="singlePost">
             <div className="singlePostWrapper">
-                <img src={Image} alt="" className="singlePostImage" />
+                {post.photo && (
+                <img src={post.photo}
+                alt=""
+                className="singlePostImage" />
+                )}
                 <h1 className="singlePostTitle">
-                    Lorem ipsum dolor sit
+                    {post.title}
                     <div className="singlePostEdit">
                         <i className="singlePostIcon far fa-edit"></i>
                         <i className="singlePostIcon far fa-trash-alt"></i>
@@ -16,32 +34,14 @@ export default function SinglePost() {
                 </h1>
                 <div className="singlePostInfo">
                     <span className="singlePostAuthor">
-                        Author: <b>Bálint</b>
+                        Author: <b>{post.username}</b>
                     </span>
                     <span className="singlePostDate">
-                        1 hour ago
+                        {new Date(post.createdAt).toLocaleString()}
                     </span>
                 </div>
                 <p className="singlePostDescription">
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugit dicta qui, at temporibus eos numquam repudiandae deleniti, 
-                    veniam architecto dolor dignissimos aliquid minus reprehenderit quae enim? Dolorem, obcaecati ipsa. Ea?
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugit dicta qui, at temporibus eos numquam repudiandae deleniti, 
-                    veniam architecto dolor dignissimos aliquid minus reprehenderit quae enim? Dolorem, obcaecati ipsa. Ea?
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugit dicta qui, at temporibus eos numquam repudiandae deleniti, 
-                    veniam architecto dolor dignissimos aliquid minus reprehenderit quae enim? Dolorem, obcaecati ipsa. Ea?
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugit dicta qui, at temporibus eos numquam repudiandae deleniti, 
-                    veniam architecto dolor dignissimos aliquid minus reprehenderit quae enim? Dolorem, obcaecati ipsa. Ea?
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugit dicta qui, at temporibus eos numquam repudiandae deleniti, 
-                    veniam architecto dolor dignissimos aliquid minus reprehenderit quae enim? Dolorem, obcaecati ipsa. Ea?
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugit dicta qui, at temporibus eos numquam repudiandae deleniti, 
-                    veniam architecto dolor dignissimos aliquid minus reprehenderit quae enim? Dolorem, obcaecati ipsa. Ea?
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugit dicta qui, at temporibus eos numquam repudiandae deleniti, 
-                    veniam architecto dolor dignissimos aliquid minus reprehenderit quae enim? Dolorem, obcaecati ipsa. Ea?
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugit dicta qui, at temporibus eos numquam repudiandae deleniti, 
-                    veniam architecto dolor dignissimos aliquid minus reprehenderit quae enim? Dolorem, obcaecati ipsa. Ea?
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugit dicta qui, at temporibus eos numquam repudiandae deleniti, 
-                    veniam architecto dolor dignissimos aliquid minus reprehenderit quae enim? Dolorem, obcaecati ipsa. Ea?
-
+                    {post.desc}
                 </p>
             </div>
         </div>
