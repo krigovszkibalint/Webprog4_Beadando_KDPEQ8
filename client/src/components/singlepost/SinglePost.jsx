@@ -1,6 +1,7 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { useLocation } from "react-router"
+import { Link } from "react-router-dom";
 import Image from "../../assets/img/singlepostimg.jpg"
 import Sidebar from "../sidebar/Sidebar"
 import "./singlepost.css"
@@ -34,7 +35,10 @@ export default function SinglePost() {
                 </h1>
                 <div className="singlePostInfo">
                     <span className="singlePostAuthor">
-                        Author: <b>{post.username}</b>
+                        Author:<span>&nbsp;</span> 
+                        <Link className="link" to={`/?user=${post.username}`}>
+                        <b>{post.username}</b>
+                        </Link>
                     </span>
                     <span className="singlePostDate">
                         {new Date(post.createdAt).toLocaleString()}
