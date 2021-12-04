@@ -7,10 +7,12 @@ export default function Post({post}) {
     return (
         <div className="post">
             {post.photo && ( 
+                <Link className="link" to={`/post/${post._id}`}>
             <img 
             className="postImg"
             src={publicFolder + post.photo}
             alt=""/>
+            </Link>
             )}
             <div className="postInfo">
                 <div className="postCategories">
