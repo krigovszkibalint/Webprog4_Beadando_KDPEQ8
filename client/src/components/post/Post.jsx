@@ -3,12 +3,13 @@ import Image from "../../assets/img/postimg.jpg"
 import './post.css'
 
 export default function Post({post}) {
+    const publicFolder = "http://localhost:3001/images/";
     return (
         <div className="post">
             {post.photo && ( 
             <img 
             className="postImg"
-            src={post.photo}
+            src={publicFolder + post.photo}
             alt=""/>
             )}
             <div className="postInfo">
