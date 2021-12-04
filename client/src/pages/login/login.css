@@ -46,6 +46,10 @@
     font-family: 'Varela', sans-serif;
     font-size: 16px;
 }
+.loginButton:disabled {
+    cursor: not-allowed;
+    background-color: #494a4e;
+}
 .loginRegisterButton {
     margin-top: 10px;
     font-size: 14px;
