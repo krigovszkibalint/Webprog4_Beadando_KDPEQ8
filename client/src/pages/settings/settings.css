@@ -58,7 +58,7 @@
     margin-bottom: 10px;
 }
 .settingsForm > input {
-    color: gray;
+    color: #2e303a;
     margin: 10px 0;
     height: 30px;
     border: none;
@@ -78,5 +78,11 @@
     padding: 10px;
     margin-top: 20px;
     cursor: pointer;
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+.updateMessage {
+    color: #379437;
+    font-family: 'Varela Round', sans-serif;
     font-size: 16px;
 }
