@@ -2,7 +2,6 @@ import axios from "axios";
 import { useContext, useEffect, useState } from "react";
 import { useLocation } from "react-router"
 import { Link } from "react-router-dom";
-import Image from "../../assets/img/singlepostimg.jpg"
 import { Context } from "../../context/Context";
 import Sidebar from "../sidebar/Sidebar"
 import "./singlepost.css"
