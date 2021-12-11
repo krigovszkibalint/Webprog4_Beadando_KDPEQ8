@@ -62,5 +62,4 @@
 - Node.js
 - MongoDB
 - Axios
-- Context API
-- Swagger
+- Context
