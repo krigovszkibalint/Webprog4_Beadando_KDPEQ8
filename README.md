@@ -63,3 +63,19 @@
 - MongoDB
 - Axios
 - Context
+---
+## Felhasználói felület
+### Bejelentkezés
+<img src="/screenshots/login.PNG" width="1000">
+
+### Főoldal
+<img src="/screenshots/home.PNG" width="1000">
+
+### Bejegyzés megtekintése
+<img src="/screenshots/post view.PNG" width="1000">
+
+### Bejegyzés létrehozása
+<img src="/screenshots/new post.PNG" width="1000">
+
+### Profil
+<img src="/screenshots/profile.PNG" width="1000">
